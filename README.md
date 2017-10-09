@@ -2,7 +2,7 @@
 
 > Learn Data Structures and Algorithms
 
-### [day02/liner_list](day02/liner_list) 是线性表的python实现
+### [https://github.com/joppzhang/Data_Atructures_and_Algorithms/day02/liner_list](day02/liner_list) 是线性表的python实现
 
 * 可以使用l = liner_list(10)来创建一个大小为10的线性表
 * 使用l.addElement(value)来为线性表添加值
