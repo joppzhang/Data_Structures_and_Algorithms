@@ -6,6 +6,21 @@ def swap(a,b):
 	a=a^b
 	return a,b
 
+'''
+#普通版
+def bubble_sort(a,lo,hi):
+	flag = True
+	while flag :
+		flag = False
+		for i in range(lo+1,hi):
+			if a[i-1] > a[i]:
+				a[i-1],a[i]=swap(a[i-1],a[i])
+				flag = True
+	return a
+
+'''
+
+#优化版
 def bubble(a,lo,hi):
 	last = lo
 	for i in range(lo,hi-1):
@@ -13,18 +28,13 @@ def bubble(a,lo,hi):
 			last = i
 			a[i],a[i+1]=swap(a[i],a[i+1])
 	return last
-
 def bubble_sort(a,lo,hi):
-
 	while lo<hi :
 		hi=bubble(a,lo,hi);
 	return a
-
-
 
 
 #Test
 a=[1,6,3,9,4,7,0,6,3,5,2,4,5,6,7,8,9,23,35,234,1,5432,3,1231,34,2,4,64,23,345,543,245,66,234,78,653,423,4234,98]
 print(a)
 print(bubble_sort(a,0,len(a)))
-
