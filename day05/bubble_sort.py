@@ -1,0 +1,30 @@
+#冒泡排序的优化
+
+def swap(a,b):
+	a=a^b
+	b=a^b
+	a=a^b
+	return a,b
+
+def bubble(a,lo,hi):
+	last = lo
+	for i in range(lo,hi-1):
+		if a[i] > a[i+1] :
+			last = i
+			a[i],a[i+1]=swap(a[i],a[i+1])
+	return last
+
+def bubble_sort(a,lo,hi):
+
+	while lo<hi :
+		hi=bubble(a,lo,hi);
+	return a
+
+
+
+
+#Test
+a=[1,6,3,9,4,7,0,6,3,5,2,4,5,6,7,8,9,23,35,234,1,5432,3,1231,34,2,4,64,23,345,543,245,66,234,78,653,423,4234,98]
+print(a)
+print(bubble_sort(a,0,len(a)))
+
