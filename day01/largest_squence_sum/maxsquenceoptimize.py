@@ -1,5 +1,5 @@
 # *_*coding:utf-8*_*
-#优化寻找最大值的算法，时间复杂度O(n)
+#优化寻找最大子序列和的值的算法，时间复杂度O(n)
 def max_squence_optimize(arr):
 	maxSum = 0;   
 	thisSum = 0;   

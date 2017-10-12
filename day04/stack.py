@@ -1,4 +1,4 @@
-#coding=utf-8
+# *_*coding:utf-8*_*
 class Stack(object) :
   def __init__(self,size):
     #类的构造函数

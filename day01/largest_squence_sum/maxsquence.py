@@ -1,5 +1,5 @@
 # *_*coding:utf-8*_*
-
+#最大子序列和
 #最简单的一种方法就是把所有子序列和求出来，找到最大值。时间复杂度为O(n^2)
 def maxsquence(arr):
 	squence = []

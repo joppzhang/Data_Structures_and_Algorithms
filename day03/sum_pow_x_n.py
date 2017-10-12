@@ -1,3 +1,4 @@
+# *_*coding:utf-8*_*
 #求解ai*x^i (i=0,1,2……)的和
 def sum_pow(a,x,n):
 	#原始版

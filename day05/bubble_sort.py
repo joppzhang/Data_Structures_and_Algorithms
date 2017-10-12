@@ -1,3 +1,4 @@
+# *_*coding:utf-8*_*
 #冒泡排序的优化
 
 def swap(a,b):
