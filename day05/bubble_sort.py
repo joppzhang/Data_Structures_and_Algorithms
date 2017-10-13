@@ -21,7 +21,7 @@ def bubble_sort(a,lo,hi):
 
 '''
 
-#优化版
+#优化版，每次遍历后记录最后一次的交换位置，那么说明后面的数据已经排好序，从而减少排序次数
 def bubble(a,lo,hi):
 	last = lo
 	for i in range(lo,hi-1):
