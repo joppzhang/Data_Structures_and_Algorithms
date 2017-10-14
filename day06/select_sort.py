@@ -8,7 +8,6 @@ def swap(a,b):
 	a=a^b
 	return a,b
 '''
-
 def bubble_sort(a):
 	
 	for i in range(0,len(a)-1):
