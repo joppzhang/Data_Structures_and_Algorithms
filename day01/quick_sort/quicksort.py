@@ -1,5 +1,5 @@
 # *_*coding:utf-8*_*
-# 快速排序的优化递归版
+# 快速排序的代码精简递归版
 def quickSort(arr):
 	if len(arr)<2:
 		return arr
