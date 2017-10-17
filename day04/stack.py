@@ -52,5 +52,6 @@ s.push(5)
 print(s.pop())
 print(s.pop())
 print(s.pop())
+print(s.getSize())
 
 
