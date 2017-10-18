@@ -1,14 +1,14 @@
 # *_*coding:utf-8*_*
-# 根据二叉树前序遍历结果和中序遍历结果重构二叉树
-#前序遍历	|---------|-------------------------------|--------------------------------|
-#			|--根节点-|-------------左子树------------|---------------右子树-----------|
-#			|---------|-------------------------------|--------------------------------|
+# 根据二叉树后序遍历结果和中序遍历结果重构二叉树
+#后序遍历	|-------------------------------|--------------------------------|---------|
+#			|----------左子树---------------|------------右子树--------------|--根节点-|
+#			|-------------------------------|--------------------------------|---------|
 #中序遍历
 # 			|-------------------------------|---------|--------------------------------|
 # 			|-----------左子树--------------|--根节点-|------------右子树--------------|
 # 			|-------------------------------|---------|--------------------------------|
 # 
-# 构建一个队列以便下面层遍历使用
+# 构建队列以便下面层遍历使用
 class MyQueue(object):
 	def __init__(self,size):
 		self.size = size
@@ -43,17 +43,17 @@ class BinTreeNode(object):
 		self.r = None
 #重建二叉树
 class RBT(object):
-	def __init__(self,pre,tin):
-		self.pre = pre
+	def __init__(self,lrd,tin):
+		self.lrd = lrd
 		self.tin=tin
-	def rebuildTree(self,pre,tin):
-		if len(pre)==0:
+	def rebuildTree(self,lrd,tin):
+		if len(lrd)==0:
 			return None
-		if len(pre)==1:
-			return BinTreeNode(pre[0])
-		res = BinTreeNode(pre[0])
-		res.l = self.rebuildTree(pre[1: tin.index(pre[0]) + 1], tin[: tin.index(pre[0])])
-		res.r = self.rebuildTree(pre[tin.index(pre[0]) + 1: ], tin[tin.index(pre[0]) + 1: ])
+		if len(lrd)==1:
+			return BinTreeNode(lrd[0])
+		res = BinTreeNode(lrd[-1])
+		res.l = self.rebuildTree(lrd[: tin.index(lrd[-1])], tin[:tin.index(lrd[-1])])
+		res.r = self.rebuildTree(lrd[tin.index(lrd[-1]):-1], tin[tin.index(lrd[-1]) + 1: ])
 		return res
 #层遍历重建的二叉树
 def travel(res):
@@ -69,10 +69,10 @@ def travel(res):
 
 #主函数
 if __name__ == '__main__':
-	pre=[1,2,4,7,3,5,6,8]
+	lrd=[7,4,2,5,8,6,3,1]
 	tin=[4,7,2,1,5,3,8,6]
-	rbt = RBT(pre,tin)
-	res = rbt.rebuildTree(pre,tin)
+	rbt = RBT(lrd,tin)
+	res = rbt.rebuildTree(lrd,tin)
 	travel(res)
 
 
