@@ -9,7 +9,7 @@ class BstNode(object):
         self.right = None
         self.data = data
 
-#二叉树得操作
+#二叉树的操作
 class BstTree(object):
     def __init__(self,data):
         self.root = BstNode(data)
@@ -48,7 +48,7 @@ def tinTree(b,res):
     res.append(b.data)
     tinTree(b.right,res)
 
-#主方法
+#主方法Test
 if __name__ == '__main__':
     b=BstTree(8)
     b.insert(2)
