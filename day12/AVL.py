@@ -10,14 +10,15 @@ class AvlNode(object):
 class createAvlTree(object):
     def __init__(self):
         self.root = AvlNode(0)
+        self.start = AvlNode(0)
 
-    def deepth(self,root):
+    def deepth(root):
         if self==None:
             return 0
         elif self.left==None and self.right==None:
             return 1
-        l = self.deepth(self.left)
-        r = self.deepth(self.right)
+        l = self.deepth()
+        r = self.deepth()
         if l > r : 
             return l+1
         return r+1
