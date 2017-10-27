@@ -11,7 +11,7 @@ class createAvlTree(object):
     def __init__(self):
         self.root = AvlNode(0)
         self.start = AvlNode(0)
-
+    #还有问题，改天再写把
     def deepth(root):
         if self==None:
             return 0
