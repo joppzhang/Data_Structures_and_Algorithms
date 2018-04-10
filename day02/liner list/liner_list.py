@@ -1,4 +1,4 @@
-#*_*coding:utf-8*_*
+#*_*coding=utf-8*_*
 
 class liner_list(object):
 	#初始化
